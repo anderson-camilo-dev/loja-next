@@ -38,12 +38,12 @@ export default function ProductCard({ product }: ProductCardProps) {
       </Link>
 
       <div className="flex flex-1 flex-col p-4">
-        <Link href={`/product/${product.id}`}>
+        <Link href={`/products/${product.id}`}>
           <h3 className="mb-2 text-lg font-semibold text-gray-900 dark:text-gray-100 hover:text-blue-600 transition-colors">
             {product.name}
           </h3>
         </Link>
-        
+
         <p className="mb-4 flex-1 text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
           {product.description}
         </p>
@@ -52,7 +52,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           <span className="text-xl font-bold text-gray-900 dark:text-gray-100">
             {formatPrice(product.price)}
           </span>
-          
+
           <button
             disabled={!product.inStock}
             className="flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-white transition-colors hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-blue-600"
